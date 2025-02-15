@@ -16,13 +16,18 @@
 
         <header>
             <div class="left">
-                <h1><span style="color: #72a1de;">Parthraj</span>SinghBhati</h1>
+                <h1>
+                    <span style="color: #72a1de;">Parthraj</span>
+                    
+                    <span>Singh Bhati</span>
+                </h1>
             </div>
 
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Skills</a></li>
                 <li><a href="#">Projects</a></li>
+                <li><a href="#">Education</a></li>
             </ul>
 
             <div class="box-items">
@@ -39,20 +44,36 @@
             <div class="hero-info">
                 <div class="hero-info-title">
                     <i class='bx bxl-sketch'></i>
-                    Front-end Developer Portfolio
+                    My Portfolio
                 </div>
 
-                <h1>Hi, I'm Parthraj</h1>
+                <h1>Hi, I'm <span class="gradient">Parthraj!</span></h1>
 
-                <p>I'm a Front-end Developer with Experience in Website and Software Development. Check out my projects and skills</p>
+                <h2><span id="element" class="gradient"></span></h2>
+
+                <p>I'm a Front-end Developer with Experience in Open-Source Contribution and Website Development. B.Tech CS-AI student at Newton School of Technology, Rishihood University. Check out my projects and skills.</p>
 
                 <button><i class='bx bx-send' ></i></i> Contact Me</button>
             </div>
+
+            <div class="hero-vid-box">
+                <video src="Videos/hero-video.mp4" type="'video/mp4" loop autoplay muted plays-inline></video>
+            </div>
+
+            <div class="scroll-down"></div>
         </section>
     </div>
     
 
 
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Front-end Developer', 'Open Source Contributor','Front-end Developer'],
+          typeSpeed: 50,
+        });
+      </script>
 </body>
 </html>
