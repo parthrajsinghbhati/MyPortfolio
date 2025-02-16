@@ -1,7 +1,8 @@
 const video1 = document.getElementById('project-video1');
 const video2 = document.getElementById('project-video2');
 const video3 = document.getElementById('project-video3');
-const hoverSign = document.querySelector('.hover-sign')
+const hoverSign = document.querySelector('.hover-sign');
+const floatImg = document.querySelectorAll('.list .item img');
 
 const videoList = [video1, video2, video3];
 
@@ -19,4 +20,19 @@ videoList.forEach((video) => {
         video.pause();
         hoverSign.style.display = "block";
     })
-})
+});
+
+floatImg.forEach(img => {
+    const randomDelay = Math.random() * 2;
+    const randomDuration = 2 + Math.random() * 3;
+
+    img.style.animation = `floatUpDown ${randomDuration}s ease-in-out ${randomDelay}s infinite`;
+
+    img.addEventListener("mouseenter", () => {
+        img.style.animationPlayState = "paused"; 
+    });
+
+    img.addEventListener("mouseleave", () => {
+        img.style.animationPlayState = "running"; 
+    });
+});
