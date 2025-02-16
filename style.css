@@ -706,7 +706,8 @@ footer{
     left: 0;
     align-items: center;
     justify-content: center;
-    height: 70px;
+    height: 50px;
+    opacity: 0.7;
     background-color: rgba(255,255,255,0.128);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 15px rgba(255,255,255,0.356);
@@ -714,9 +715,68 @@ footer{
 }
 
 footer h1{
-    font-size: 30px;
+    font-size: 20px;
 }
 
+/* Scroll Effects */
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(40px);
+        opacity: 0;
+    }
+    35%,65%{
+        filter: blur(0);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(40px);
+        opacity: 0;
+    }
+}
+
+.autoDisplay{
+    animation: autoDisplayAnimation both;
+    animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation{
+    from{
+        filter: blur(10px);
+        transform: translateY(-200px) scale(0);
+        opacity: 0.2;
+    }
+    50%{
+        filter: blur(0);
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.fadeInRight{
+    animation: fadeInRight both;
+    animation-timeline: view();
+}
+
+@keyframes fadeInRight{
+    0%{
+        transform: translateX(-500px) scale(0.2);
+        opacity: 0;
+        filter: blur(20px);
+    }
+    35%,65%{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+    100%{
+        filter: blur(20px);
+    }
+}
 
 @media (max-aspect-ratio: 16/9){
     .back-vid{
