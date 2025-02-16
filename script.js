@@ -4,6 +4,10 @@ const video3 = document.getElementById('project-video3');
 const hoverSign = document.querySelector('.hover-sign');
 const floatImg = document.querySelectorAll('.list .item img');
 
+const sideBar = document.querySelector('.sidebar');
+const menu = document.querySelector('.menu-icon');
+const close = document.querySelector('.close-icon');
+
 const videoList = [video1, video2, video3];
 
 videoList.forEach((video) => {
@@ -36,3 +40,13 @@ floatImg.forEach(img => {
         img.style.animationPlayState = "running"; 
     });
 });
+
+menu.addEventListener('click', () => {
+    sideBar.classList.remove('close-sidebar');
+    sideBar.classList.add('open-sidebar');
+})
+
+close.addEventListener('click', () => {
+    sideBar.classList.remove('open-sidebar');
+    sideBar.classList.add('close-sidebar');
+})
