@@ -50,3 +50,20 @@ close.addEventListener('click', () => {
     sideBar.classList.remove('open-sidebar');
     sideBar.classList.add('close-sidebar');
 })
+
+function scrollId(element) {
+    document.getElementById(element).scrollIntoView({ behavior: "smooth" });
+}
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let confirmation = document.getElementById("confirmationMessage");
+    confirmation.classList.add("show");
+
+    this.reset();
+
+    setTimeout(() => {
+        confirmation.classList.remove("show");
+    }, 3000);
+});
