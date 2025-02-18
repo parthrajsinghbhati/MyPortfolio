@@ -1041,6 +1041,10 @@ footer h1{
         top: 5%;
     }
 
+    .hero-vid-box video{
+        width: 60vw;
+    }
+
     .card video{
         width: 100%;
     }
@@ -1059,14 +1063,17 @@ footer h1{
         gap: 30px;
         margin-left: 15%;
         margin-bottom: 20px;
+        width: 80%;
     }
 
     .project-info{
-        width: 85%;
+        width: 85vw;
+        display: flex;
+        align-items:flex-start;
     }
 
     .project-info h1{
-        text-wrap: nowrap;
+        text-wrap: wrap;
     }
 
     .project-info p{
@@ -1088,6 +1095,11 @@ footer h1{
     .designer h1,
     .coder h1{
         font-size: 30px;
+    }
+
+    .designer p,
+    .coder p{
+        font-size: 15px;
     }
 
     .skills-box h1{
