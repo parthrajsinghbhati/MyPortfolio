@@ -20,6 +20,6 @@ I am a **Front-End Developer**, **Open Source Contributor**, and **National Soft
 
 ## 🛠️ Technologies Used
 - **Frontend:** HTML5, CSS3, JavaScript
-- **Styling:** Tailwind CSS 
+- **Styling:** CSS3 
 - **Version Control:** Git & GitHub
 - **Hosting:** Vercel
